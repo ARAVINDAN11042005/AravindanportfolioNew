@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Brain, GamepadIcon, Hand } from "lucide-react";
+import { Brain, GamepadIcon, Hand } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -12,7 +12,7 @@ const Projects = () => {
       technologies: ["Python", "AI/ML", "RAG", "OpenCV", "MediaPipe"],
       features: [
         "Personalized learning paths",
-        "Real-time assessment adaptation", 
+        "Real-time assessment adaptation",
         "Advanced AI algorithms",
         "Educational analytics"
       ],
@@ -27,7 +27,7 @@ const Projects = () => {
       features: [
         "Unbeatable AI opponent",
         "Minimax algorithm implementation",
-        "Clean user interface", 
+        "Clean user interface",
         "Multiple difficulty levels"
       ],
       github: "#",
@@ -61,7 +61,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
@@ -75,7 +75,7 @@ const Projects = () => {
                   </div>
                   <p className="text-muted-foreground">{project.description}</p>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-6">
                   {/* Technologies */}
                   <div>

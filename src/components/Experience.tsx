@@ -6,18 +6,18 @@ const Experience = () => {
   const experiences = [
     {
       title: "Java Development Intern",
-      company: "Arient Services",
+      company: "Rejola IT Services",
       duration: "June 2024 - July 2024",
       location: "Remote",
-      description: "Developed Java applications focusing on backend development and algorithm implementation.",
+      description: "Developed Java applications using OOP concepts, fixed bugs, tested applications and worked in a team environment.",
       technologies: ["Java", "Spring Boot", "DSA", "Backend Development"]
     },
     {
       title: "Web Development Intern",
       company: "Techno Hacks Edu-Tech",
-      duration: "May 2024 - June 2024", 
+      duration: "May 2024 - June 2024",
       location: "Remote",
-      description: "Built responsive web applications using modern frontend technologies and frameworks.",
+      description: "Developed responsive web pages, improved UI using HTML, CSS and JavaScript, and debugged frontend issues.",
       technologies: ["HTML", "CSS", "JavaScript", "React", "Responsive Design"]
     }
   ];
@@ -83,9 +83,9 @@ const Experience = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-4">{exp.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <Badge key={techIndex} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
@@ -102,7 +102,7 @@ const Experience = () => {
         {/* Certifications */}
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-center">Certifications & Courses</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <Card key={index} className="hover:shadow-elegant transition-all duration-300 animate-fade-in">
                 <CardContent className="p-6">

@@ -1,5 +1,3 @@
-import { Heart } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-8">
