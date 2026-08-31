@@ -24,11 +24,24 @@ const Header = () => {
     { label: "Contact", href: "#contact" }
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+          >
             Aravindan R
           </a>
 
@@ -38,6 +51,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-foreground hover:text-primary transition-colors duration-300 relative group"
               >
                 {item.label}
@@ -71,7 +85,10 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 className="block py-3 text-foreground hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, item.href);
+                  setIsMenuOpen(false);
+                }}
               >
                 {item.label}
               </a>
